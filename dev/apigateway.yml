@@ -1,0 +1,25 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: movie
+          uri: lb://movie
+          predicates:
+            - Path=/api/movies/**
+          filters:
+            - AutorizacionFilter
+        - id: autenticacion
+          uri: lb://autenticacion
+          predicates:
+            - Path=/api/autenticacion/**
+            
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
