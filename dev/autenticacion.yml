@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: autentication
+    name: autenticacion
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://localhost:1433;DatabaseName=db_movies;encrypt=false;trustServerCertificate=false;
