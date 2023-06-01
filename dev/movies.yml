@@ -5,6 +5,7 @@ spring:
   application:
     name: movies
   datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://localhost:1433;DatabaseName=db_movies;encrypt=false;trustServerCertificate=false;
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
     username: sa
