@@ -5,8 +5,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: movie
-          uri: lb://movie
+        - id: movies
+          uri: lb://movies
           predicates:
             - Path=/api/movies/**
           filters:
